@@ -4,10 +4,10 @@ com/au/management/controller/SkillsController.java
  com.au.management.controller.SkillsController
 com/au/management/dao/impl/SkillDaoImpl.java
  com.au.management.dao.impl.SkillDaoImpl
-SwaggerConfig.java
- SwaggerConfig
 com/au/management/dao/AssessmentDao.java
  com.au.management.dao.AssessmentDao
+SwaggerConfig.java
+ SwaggerConfig
 com/au/management/service/SkillService.java
  com.au.management.service.SkillService
 com/au/management/service/impl/TagServiceImp.java
@@ -30,8 +30,8 @@ com/au/management/model/enums/AssessmentType.java
  com.au.management.model.enums.AssessmentType
 com/au/management/dao/impl/CandidateDaoImpl.java
  com.au.management.dao.impl.CandidateDaoImpl
-com/au/management/controller/AssessmentController.java
- com.au.management.controller.AssessmentController
+com/au/management/dao/impl/AssessmentDaoImpl.java
+ com.au.management.dao.impl.AssessmentDaoImpl
 com/au/management/dao/SkillDao.java
  com.au.management.dao.SkillDao
 com/au/management/dao/impl/UserDetailsDaoImpl.java
@@ -40,10 +40,10 @@ com/au/management/controller/UserDetailsController.java
  com.au.management.controller.UserDetailsController
 com/au/management/service/impl/CandidateServiceImpl.java
  com.au.management.service.impl.CandidateServiceImpl
-com/au/management/dao/rowMapper/AssessmentResultRowMapper.java
- com.au.management.dao.rowMapper.AssessmentResultRowMapper
 com/au/management/dao/rowMapper/AssessmentRowMapper.java
  com.au.management.dao.rowMapper.AssessmentRowMapper
+com/au/management/dao/rowMapper/AssessmentResultRowMapper.java
+ com.au.management.dao.rowMapper.AssessmentResultRowMapper
 com/au/management/model/UserDetails.java
  com.au.management.model.UserDetails
 com/au/management/model/Tag.java
@@ -78,27 +78,27 @@ com/au/management/model/Trainer.java
  com.au.management.model.Trainer
 com/au/management/service/CourseService.java
  com.au.management.service.CourseService
+com/au/management/dao/impl/CourseDaoImpl.java
+ com.au.management.dao.impl.CourseDaoImpl
 com/au/management/dao/rowMapper/CourseRowMapper.java
  com.au.management.dao.rowMapper.CourseRowMapper
 com/au/management/dao/rowMapper/UserDetailsRowMapper.java
  com.au.management.dao.rowMapper.UserDetailsRowMapper
-com/au/management/dao/impl/CourseDaoImpl.java
- com.au.management.dao.impl.CourseDaoImpl
 com/au/management/model/OperationStatus.java
  com.au.management.model.OperationStatus
 com/au/management/service/TrainerService.java
  com.au.management.service.TrainerService
-com/au/management/service/TagService.java
- com.au.management.service.TagService
 com/au/management/controller/CourseController.java
  com.au.management.controller.CourseController
+com/au/management/service/TagService.java
+ com.au.management.service.TagService
 com/au/management/dao/rowMapper/TagRowMapper.java
  com.au.management.dao.rowMapper.TagRowMapper
 com/au/management/ManagementApplication.java
  com.au.management.ManagementApplication
-com/au/management/dao/CourseDao.java
- com.au.management.dao.CourseDao
+com/au/management/controller/AssessmentController.java
+ com.au.management.controller.AssessmentController
 com/au/management/service/impl/SkillServiceImpl.java
  com.au.management.service.impl.SkillServiceImpl
-com/au/management/dao/impl/AssessmentDaoImpl.java
- com.au.management.dao.impl.AssessmentDaoImpl
+com/au/management/dao/CourseDao.java
+ com.au.management.dao.CourseDao

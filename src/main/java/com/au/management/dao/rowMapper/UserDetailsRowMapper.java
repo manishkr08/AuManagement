@@ -2,10 +2,12 @@ package com.au.management.dao.rowMapper;
 
 import com.au.management.model.UserDetails;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+@Component
 public class UserDetailsRowMapper implements RowMapper<UserDetails> {
     @Override
     public UserDetails mapRow(ResultSet rs, int rowNum) throws SQLException {

@@ -8,4 +8,5 @@ public interface TagDao {
 
     List<Tag> selectAllTags() ;
 
+    List<Tag> selectTagByAssessmentId(int id);
 }

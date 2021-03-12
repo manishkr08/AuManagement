@@ -19,7 +19,6 @@ public class AssessmentController {
 
     @PostMapping
     public OperationStatus addAssessment(@RequestBody Assessment assessment) {
-        System.out.println(assessment);
         return assessmentService.addAssessment(assessment);
     }
 
@@ -35,6 +34,8 @@ public class AssessmentController {
 
     @PutMapping("/{id}")
     public OperationStatus updateAssessment(@PathVariable int id, @RequestBody Assessment assessment) {
+        System.out.println(id);
+        System.out.println(assessment);
         return assessmentService.updateAssessment(id, assessment);
     }
 
@@ -47,5 +48,4 @@ public class AssessmentController {
     public List<AssessmentResult> getAssessmentResults(@PathVariable int id) {
         return assessmentService.getAssessmentResults(id);
     }
-
 }

@@ -14,7 +14,6 @@ public class Assessment {
     private int creatorId;
     private Course course;
     private int maxMarks;
-    private int version;
     private List<Tag> tags;
     private Date dateCreated;
     private Date dateModified;
@@ -76,14 +75,6 @@ public class Assessment {
         this.maxMarks = maxMarks;
     }
 
-    public int getVersion() {
-        return version;
-    }
-
-    public void setVersion(int version) {
-        this.version = version;
-    }
-
     public List<Tag> getTags() {
         return tags;
     }
@@ -126,7 +117,6 @@ public class Assessment {
                 ", creatorId=" + creatorId +
                 ", course=" + course +
                 ", maxMarks=" + maxMarks +
-                ", version=" + version +
                 ", tags=" + tags +
                 ", dateCreated=" + dateCreated +
                 ", dateModified=" + dateModified +

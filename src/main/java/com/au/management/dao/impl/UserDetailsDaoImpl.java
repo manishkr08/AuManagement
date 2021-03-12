@@ -11,18 +11,18 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserDetailsDaoImpl implements UserDetailsDao {
 
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
     // SQL queries
     private final String SELECT_USER_DETAILS = "SELECT user_id, first_name, last_name, email FROM user_details where user_id = ?";
     private final String GET_USER_CREDENTIALS_BY_EMAIL = "SELECT * FROM user_details where email = ?;";
     private final String COUNT_USER_BY_EMAIL = "SELECT COUNT(*) FROM user_details where email= ?";
     private final String ADD_USER = "insert into user_details (first_name, last_name, email, password) values (?, ?, ?, ?);";
 
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-
     // Row mappers
-    private UserDetailsRowMapper userDetailsRowMapper = new UserDetailsRowMapper();
-
+    @Autowired
+    private UserDetailsRowMapper userDetailsRowMapper;
     @Override
     public UserDetails selectUserDetails(int id) {
         return jdbcTemplate.queryForObject(SELECT_USER_DETAILS, userDetailsRowMapper, id);

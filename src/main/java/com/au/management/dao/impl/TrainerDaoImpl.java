@@ -19,7 +19,8 @@ public class TrainerDaoImpl implements TrainerDao {
     private JdbcTemplate jdbcTemplate;
 
     // Row mappers
-    private TrainerRowMapper trainerRowMapper = new TrainerRowMapper();
+    @Autowired
+    private TrainerRowMapper trainerRowMapper ;
 
     @Override
     public List<Trainer> selectAllTrainers() {

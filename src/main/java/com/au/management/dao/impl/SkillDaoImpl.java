@@ -15,14 +15,22 @@ public class SkillDaoImpl  implements SkillDao {
     // SQL queries
     private final String SELECT_ALL_SKILLS = "select * from skills";
 
+    private final String SELECT_SKILL_BY_ASSESSMENT_ID = "select aps.skill_id, s.name from assessment_prerequisite_skills aps inner join skills s on aps.skill_id = s.skill_id where assessment_id = ?";
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     // Row mappers
-    private SkillRowMapper skillRowMapper = new SkillRowMapper();
+    @Autowired
+    private SkillRowMapper skillRowMapper;
 
     @Override
     public List<Skill> selectAllSkill() {
         return jdbcTemplate.query(SELECT_ALL_SKILLS, skillRowMapper);
+    }
+
+    @Override
+    public List<Skill> selectSkillByAssessmentId(int id) {
+        return jdbcTemplate.query(SELECT_SKILL_BY_ASSESSMENT_ID, skillRowMapper, id);
     }
 }

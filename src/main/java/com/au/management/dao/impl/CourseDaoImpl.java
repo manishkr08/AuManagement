@@ -20,7 +20,8 @@ public class CourseDaoImpl implements CourseDao {
     private JdbcTemplate jdbcTemplate;
 
     // Row mappers
-    private final CourseRowMapper courseRowMapper = new CourseRowMapper();
+    @Autowired
+    private CourseRowMapper courseRowMapper;
 
     @Override
     public List<Course> selectAllCourse() {

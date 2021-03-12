@@ -8,4 +8,5 @@ public interface SkillDao {
 
     List<Skill> selectAllSkill();
 
+    List<Skill> selectSkillByAssessmentId(int id);
 }
